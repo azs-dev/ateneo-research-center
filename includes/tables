@@ -1,0 +1,60 @@
+CREATE TABLE users (
+	user_id int(11) AUTO_INCREMENT PRIMARY KEY not null,
+	user_first varchar(255) not null,
+	user_last varchar(255) not null,
+	user_email varchar(255) not null,
+    user_phone varchar(50) not null,
+	user_uid varchar(255) not null,
+	user_pwd varchar(255) not null
+
+);
+
+INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd)
+VALUES ('ash', 'ketchum', 'ashketchum@gmail.com', 'ashketchum', 'pikachu');
+
+//
+CREATE TABLE publication (
+    pub_id int (100) AUTO_INCREMENT PRIMARY KEY not null,
+    pub_applicant varchar(255) not null,
+	pub_email varchar(255) not null,
+	pub_department varchar(255) not null,
+	pub_title varchar(255) not null,
+	pub_publisher varchar(255) not null,
+    pub_volume varchar(255) not null,
+    pub_books varchar(50),
+    pub_chapter varchar(50),
+    pub_literary varchar(50),
+    pub_journal varchar (50),
+    pub_gifts varchar(500),
+    pub_important varchar(500)
+    );
+    
+ //
+
+CREATE TABLE presentation (
+    prs_id int (100) AUTO_INCREMENT PRIMARY KEY not null,
+    prs_applicant varchar(255) not null,
+    prs_email varchar(255) not null,
+    prs_department varchar(255) not null,
+    prs_papertitle varchar(255) not null,
+    prs_conftitle varchar(255) not null,
+    prs_confdate date not null,
+    prs_reg_amount double(255, 2),
+    prs_air_amount double(255, 2),
+    prs_perdiem_amount double(255, 2),
+    prs_visa_amount double(255, 2),
+    prs_others_amount text,
+    prs_important text
+    );
+    
+    
+
+//
+            VALUES ('$applicant', '$email','$department','$title','$publisher','$volume','$books','$chapter','$literary',
+                    '$journal','$gifts','$important');";
+
+//
+
+ VALUES ('$applicant','$email','$department','$titleofpaper','$conftitle','$confdate','$reg','$airfaire','$per','$visa','$others','$important');";
+
+ //

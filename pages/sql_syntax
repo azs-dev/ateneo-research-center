@@ -1,0 +1,66 @@
+databases SQL code here
+//
+
+insert into
+ posts	(topic, content, date) 
+ VALUES ('topic', 'insert lorem ipsum text here', '2019-2-14 10:06:0.1');
+
+ //
+
+ SELECT * FROM nameoftable;
+ SELECT columnname FROM nameoftable;
+ SELECT * FROM nameoftable WHERE columnname="1";
+ SELECT * FROM nameoftable WHERE username="aziz" AND password="pass";
+
+ //
+
+ UPDATE tablename
+ SET columnname='contentnameuwant' WHERE columnname='contentitwas';
+
+ UPDATE posts
+ SET topic='shoes' WHERE topic='watches';
+
+ //
+
+DELETE FROM tablename
+WHERE columnname='content';
+
+//
+
+SELECT * FROM table
+ORDER By id ASC;        
+
+ASC(ascending)   DESC(descending)
+
+
+
+//
+
+CREATE TABLE users (
+	user_id int(11) AUTO_INCREMENT PRIMARY KEY not null,
+	user_first varchar(256) not null,
+	user_last varchar(256) not null,
+	user_email varchar(256) not null,
+	user_uid varchar(256) not null,
+	user_pwd varchar(256) not null,
+	);
+
+INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd)
+VALUES ('aziz', 'somandar', 'azomndr@gmail.com', '20','123pass');	
+
+//
+
+<?php
+		$sql = "SELECT * FROM users;";
+		$result = mysqli_query($conn, $sql);
+		$resultCheck = mysqli_num_rows($result);
+
+		if ($resultCheck > 0) {
+			while ($row = mysqli_fetch_assoc($result)) {
+				echo $row['user_uid']."<br>";
+			}
+		}
+?>
+
+DISPLAY ALL USER ID IN OUR DATABASE
+//
